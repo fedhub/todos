@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\swisa\AndroidStudioProjects\TodosApp\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="C:\Users\swisa\AndroidStudioProjects\TodosApp\app\build\intermediates\pre-dexed\debug\classes-47577a111eea1ca7b7da34755da88d453b28d5c7.jar" />
+    </item>
+    <item
+        jar="C:\Users\swisa\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="C:\Users\swisa\AndroidStudioProjects\TodosApp\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1-581b9bb76d838b9c5b0a2c5f2eee70b813f97ff0.jar" />
+    </item>
+    <item
+        jar="C:\Users\swisa\AndroidStudioProjects\TodosApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="C:\Users\swisa\AndroidStudioProjects\TodosApp\app\build\intermediates\pre-dexed\debug\classes-154a95b9ea9d0cc44d0922baaf3bd081b9582121.jar" />
+    </item>
+    <item
+        jar="C:\Users\swisa\AndroidStudioProjects\TodosApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="C:\Users\swisa\AndroidStudioProjects\TodosApp\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1-ed4a983fbe64e10fc14adb7604e070a06b9dac1c.jar" />
+    </item>
+    <item
+        jar="C:\Users\swisa\AndroidStudioProjects\TodosApp\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="C:\Users\swisa\AndroidStudioProjects\TodosApp\app\build\intermediates\pre-dexed\debug\classes-18cde534cfe0a0bfd95379c503149cdff6189515.jar" />
+    </item>
+    <item
+        jar="C:\Users\swisa\AndroidStudioProjects\TodosApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="C:\Users\swisa\AndroidStudioProjects\TodosApp\app\build\intermediates\pre-dexed\debug\classes-20e80761421cddbfd49520abc60ada32ad3fd2a3.jar" />
+    </item>
+
+</items>
