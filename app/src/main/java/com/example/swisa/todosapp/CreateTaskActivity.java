@@ -9,9 +9,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
 
+import java.util.ArrayList;
+
 public class CreateTaskActivity extends AppCompatActivity {
 
-    public final static String TASK_DESCRIPTION = "com.example.swisa.todosapp.TASK_DESCRIPTION";
+    public static String TASK_DESCRIPTION = "com.example.swisa.todosapp.TASK_DESCRIPTION";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
