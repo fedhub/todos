@@ -5,4 +5,17 @@
     <string name="description">Description</string>
     <string name="title_activity_create_task">CreateTaskActivity</string>
     <string name="create">Create</string>
+    <string name="example">Example</string>
+    <string name="done">Done</string>
+    <string-array name="slideMenu">
+        <item>Manage team</item>
+        <item>Settings</item>
+        <item>Login</item>
+        <item>About</item>
+    </string-array>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="delete_task">Delete</string>
 </resources>

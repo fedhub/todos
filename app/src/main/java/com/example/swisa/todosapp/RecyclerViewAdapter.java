@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.Collection;
@@ -27,8 +28,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = inflater.inflate(R.layout.task_row, parent, false);
-        MyViewHolder holder = new MyViewHolder(view);
-        return holder;
+        return new MyViewHolder(view);
     }
 
     @Override
@@ -38,15 +38,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     @Override
-    public int getItemCount() {
-        return data.size();
-    }
+    public int getItemCount() {return data.size();}
 
     class MyViewHolder extends RecyclerView.ViewHolder{
         TextView title;
+        Button button;
         public MyViewHolder(View itemView) {
             super(itemView);
             title = (TextView)itemView.findViewById(R.id.listText);
+            button = (Button)itemView.findViewById(R.id.listButton);
         }
 
     }

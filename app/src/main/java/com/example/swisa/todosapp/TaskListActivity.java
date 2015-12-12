@@ -1,6 +1,8 @@
 package com.example.swisa.todosapp;
 
+import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -8,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,31 +27,31 @@ public class TaskListActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     RecyclerViewAdapter adapter;
-    public static ArrayList<String> titles = new ArrayList<String>();
+    Context ctx = this;
 
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task_list);
 
-        Intent intent = getIntent();
-        String taskDescription = intent.getStringExtra(CreateTaskActivity.TASK_DESCRIPTION);
-
         recyclerView = (RecyclerView) findViewById(R.id.list);
-        adapter = new RecyclerViewAdapter(this, getData(taskDescription));
+
+        DatabaseOperations DB = new DatabaseOperations(ctx);
+
+        adapter = new RecyclerViewAdapter(this, getData(DB.getInformation(DB)));
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
-    public List<Task> getData(String taskDescription){
+    public List<Task> getData(Cursor cr) {
         List<Task> data = new ArrayList<>();
-        if(taskDescription != null){
-            titles.add(taskDescription);
-        }
-        for(int i = 0; i < titles.size(); i++){
-            Task task = new Task();
-            task.title = titles.get(i);
-            data.add(task);
+        if (cr.moveToFirst()) {
+            while (!cr.isAfterLast()) {
+                Task task = new Task();
+                task.title = cr.getString(cr.getColumnIndex("title"));
+                data.add(task);
+                cr.moveToNext();
+            }
         }
         return data;
     }
@@ -56,5 +59,12 @@ public class TaskListActivity extends AppCompatActivity {
     public void addTask(View view){
         Intent intent = new Intent(this, CreateTaskActivity.class); // this is a reference to the TaskListActivity above
         startActivity(intent);
+    }
+
+    public void deleteTask(View view){
+        DatabaseOperations DB = new DatabaseOperations(ctx);
+        DB.deleteTask(DB);
+        finish();
+        startActivity(getIntent());
     }
 }
